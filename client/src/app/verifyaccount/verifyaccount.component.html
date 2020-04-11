@@ -1,0 +1,54 @@
+<div class="container justify-content-center">
+    <form class="text-center border border-light p-5  wow bounce" action="#!"  style="background-color: aliceblue;margin : 50px">
+    
+        <p class="h4 mb-4">Verify Account</p>
+      
+        <div class="form-group mt-4">
+            <label for="quickReplyFormComment">It's free space if you have to add something :)  </label>
+            <textarea class="form-control" id="quickReplyFormComment" rows="5"></textarea>
+
+          
+          </div>
+        
+        
+                
+                <!-- Default inline 1-->
+        <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline1">
+            <label class="custom-control-label" for="defaultInline1">Health</label>
+        </div>
+        
+        <!-- Default inline 2-->
+        <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline2">
+            <label class="custom-control-label" for="defaultInline2">Buisness</label>
+        </div>
+        
+        <!-- Default inline 3-->
+        <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline3">
+            <label class="custom-control-label" for="defaultInline3">Sport</label>
+        </div>
+        <br>
+        <br>
+          <!-- Phone file -->
+          <input type="file" (change)="save($event)" multiple="multiple">
+          <br>
+          <span [innerHTML]="result"></span>
+          <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+            Select files that confirm your specification fields/job
+           </small>
+      
+       
+       
+      
+        <!-- Sign up button -->
+        <div>
+        <button class="btn btn-info my-4 btn-block justif" type="submit">Verify</button>
+        </div>
+      
+        <hr>
+      
+      
+      </form>
+    </div>

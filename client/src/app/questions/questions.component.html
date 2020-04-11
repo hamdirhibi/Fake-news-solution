@@ -1,0 +1,489 @@
+
+<div class="container  justify-content-start">
+	<div class="card" style="margin-top : 50px">
+    <div class="container">
+		<!--Section: Content-->
+		<section >
+	  
+			<style>
+			  @media (max-width: 767px) {
+				.social-buttons .btn {
+				  padding: 8px 15px;
+				
+				}
+			  }
+			</style>
+	  
+			<!-- Featured image -->
+			<!-- <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(5).jpg" class="img-fluid z-depth-1 rounded mb-4"
+        alt=""> -->
+        <div class="justify-content-start" style="margin : 30px">
+          <p class="mb-4">
+            <strong>
+            <a href="" class="indigo-text mx-2">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded z-depth-1"
+              style="width: 51px; height: 51px;">
+              <strong class="ml-1">John Doe</strong>
+             
+
+            </a>
+            <br>
+            <br>
+            <!-- <strong> Posted 21.10.2019</strong> -->
+            </strong>
+          </p>
+
+          <div class="form-group mt-4">
+            <label for="quickReplyFormComment">Share something</label>
+            <textarea class="form-control" id="quickReplyFormComment" rows="5" [(ngModel)]="post"></textarea>
+
+            <div class="text-center my-4">
+              <button class="btn btn-info btn-sm" type="submit" (click)="postSomething()">Post</button>
+            </div>
+          </div>
+
+      </div>
+       
+			
+	  
+	  
+		  </section>
+		<!--Section: Content-->
+    </div>
+
+	  
+	  </div>
+
+
+
+
+
+<div class="container  justify-content-center" >
+
+<div class="card wow bounceInRight"  *ngFor="let post of posts" style="margin : 50 px " >
+
+	<div class="card" style="margin-top : 50px" >
+    <div class="container">
+		<!--Section: Content-->
+		<section >
+	  
+			<style>
+			  @media (max-width: 767px) {
+				.social-buttons .btn {
+				  padding: 8px 15px;
+				}
+			  }
+			</style>
+	  
+			<!-- Featured image -->
+			<!-- <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(5).jpg" class="img-fluid z-depth-1 rounded mb-4"
+        alt=""> -->
+        <div class="justify-content-start" style="margin : 30px">
+          <p class="mb-4">
+            <strong>
+            <a href="" class="indigo-text mx-2">
+              <img [src]="post.userImage" class="rounded z-depth-1"
+              style="width: 51px; height: 51px;">
+              <strong class="ml-1">{{post.userName}}</strong>
+            </a>
+            <br>
+            <br>
+            <strong> Posted {{post.datePost}}</strong>
+            </strong>
+          </p>
+
+      </div>
+        <p>{{post.postDescription}} </p>
+			
+	  
+			<!-- Interactions -->
+			<div class="social-buttons smooth-scroll">
+			  <!--Facebook-->
+			  <!-- <button type="button" class="btn btn-sm btn-fb my-0">
+				<i class="fab fa-facebook-f"></i>
+			  </button>
+	   -->
+			  <!--Twitter-->
+			  <!-- <button type="button" class="btn btn-sm btn-tw my-0">
+				<i class="fab fa-twitter"></i>
+			  </button> -->
+	  
+			  <!--Twitter-->
+        <!-- <button type="button" class="btn btn-sm btn-li my-0">
+        <i class="fab fa-linkedin-in"></i>
+        </button>
+      -->
+       <!-- like -->
+
+        <button class="btn btn-sm btn-success my-0 "  style="color:white ; ">
+          <i class="far fa-thumbs-up left "></i> Like <span>{{post.like}}</span>
+        </button>
+       
+        <!--Dilike -->
+
+        <button class="btn btn-sm btn-danger my-0 danger"   style="color:white">
+          <i class="far fa-thumbs-down left"></i>Dislike <span>{{post.dislike}}</span>
+        </button>
+			  <!-- Comments -->
+        <button class="btn btn-sm btn-info my-0 danger"   style="color:white">
+          <i class="far fa-comments mr-1"></i> Comments <span> </span>
+        </button>
+			</div>
+			<!-- Interactions -->
+	  
+		  </section>
+		<!--Section: Content-->
+    </div>
+
+	  
+	  </div>
+
+
+
+
+
+<div class="container my-5 py-5 px-md-5 z-depth-1" >
+
+
+    <!--Section: Content-->
+    <section class="text-center text-lg-left dark-grey-text">
+
+        <div class="text-center font-weight-bold"><span></span> comments</div>
+
+
+        <div class="wow bounceInLeft"style="display : inline-table;" *ngFor="let comment of post.comments">
+
+    
+        <div class="media d-block d-md-flex mt-4" >
+          
+
+            <img class="card-img-64 rounded z-depth-1 d-flex mx-auto mb-3"
+              [src]="comment.userImage" alt="Generic placeholder image">
+            <div class="media-body text-center text-md-left ml-md-3 ml-0">
+              <p class="font-weight-bold my-0">
+                {{comment.userName}}
+                <a href="" class="pull-right ml-1">
+                  <!-- <i class="fas fa-reply"></i> -->
+                </a>
+              </p>
+              {{comment.userDescription}}
+            </div>
+            
+          <!-- like -->
+          <div class="media d-block d-md-flex mt-4" >
+            <button class="btn btn-sm btn-success my-0 "  style="color:white ; ">
+            <i class="far fa-thumbs-up left "></i> Like <span>(4)</span>
+          </button>
+       
+          <!--Dilike -->
+  
+          <button class="btn btn-sm btn-danger my-0 danger"   style="color:white">
+            <i class="far fa-thumbs-down left"></i>Dislike <span>(4)</span>
+          </button>
+      </div>
+        </div>
+
+        </div>
+      
+
+          <div class="form-group mt-4">
+            <label for="quickReplyFormComment">Your comment</label>
+            <textarea class="form-control" id="quickReplyFormComment" rows="5" [(ngModel)]="comment"></textarea>
+
+            <div class="text-center my-4">
+              <button class="btn btn-info btn-sm" type="submit" (click)="addcomment()">Post</button>
+            </div>
+          </div>
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+
+
+</div>
+
+</div>
+
+
+
+<div class="container">
+  <!--Section: Magazine v.2-->
+  <section class="magazine-section my-5">
+    
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold text-center my-5">Most Popular Questions</h2>
+    <!-- Section description -->
+    <p class="text-center dark-grey-text w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in
+      voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit id laborum.</p>
+  
+    <!-- Grid row -->
+    <div class="row " >
+  
+      <!-- Grid column -->
+      <div class="col-lg-6 col-md-12">
+  
+        <!-- Featured news -->
+         <!-- Featured news -->
+         <div class="single-news mb-lg-0 mb-3 wow fadeInLeft">
+  
+          <!-- Image -->
+          <div class="view overlay rounded z-depth-1-half mb-4">
+            <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Avatars/img (20).jpg" alt="Sample image">
+            <a>
+              <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
+            </a>
+          </div>
+  
+          <!-- Data -->
+          <div class="news-data d-flex justify-content-between">
+            <a href="#!" class="deep-orange-text">
+              <h6 class="font-weight-bold">
+                <mdb-icon fas icon="futbol" class="pr-2"></mdb-icon>Sport</h6>
+            </a>
+            <p class="font-weight-bold dark-grey-text">
+              <mdb-icon far icon="clock" class="pr-2"></mdb-icon>27/02/2018</p>
+          </div>
+  
+          <!-- Excerpt -->
+          <h3 class="font-weight-bold dark-grey-text mb-3">
+            <a>Hamdi Rhibi</a>
+          </h3>
+          <p class="dark-grey-text mb-lg-0 mb-md-5 mb-4">Sed ut perspiciatis unde voluptatem omnis iste natus
+            error sit
+            voluptatem accusantium doloremque laudantium,
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+            explicabo.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+  
+        </div>
+        <!-- Featured news -->
+  
+        <!-- Featured news -->
+  
+      </div>
+      <!-- Grid column -->
+  
+      <!-- Grid column -->
+      <div class="col-lg-6 col-md-12">
+  
+        <!-- Small news -->
+        <div class="single-news mb-lg-0 mb-4 wow fadeInRight">
+  
+          <!-- Grid row -->
+          <div class="row">
+  
+            <!-- Grid column -->
+            <div class="col-md-3">
+  
+              <!--Image-->
+              <div class="view overlay rounded z-depth-1 mb-4">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Avatars/img (27).jpg" alt="Sample image">
+                <a>
+                  <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
+                </a>
+
+                
+              </div>
+              
+  
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-9">
+  
+              <!-- Excerpt -->
+              <p class="font-weight-bold dark-grey-text">Tommy filder</p>
+              <div class="news-data d-flex justify-content-between">
+                <a href="#!" class="deep-orange-text">
+                  <h6 class="font-weight-bold">
+                    <mdb-icon fas icon="futbol" class="pr-2"></mdb-icon>Sport</h6>
+                </a>
+                <p class="font-weight-bold dark-grey-text">
+                  <mdb-icon far icon="clock" class="pr-2"></mdb-icon>27/02/2018</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="col-11 text-truncate pl-0 mb-3">
+                  <a href="#!" class="dark-grey-text">At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui
+                    blanditiis</a>
+                </div>
+                <a>
+                  <i class="fas fa-angle-double-right"></i>
+                </a>
+              </div>
+  
+            </div>
+            <!-- Grid column -->
+  
+          </div>
+          <!-- Grid row -->
+  
+        </div>
+        <!-- Small news -->
+  
+        <!-- Small news -->
+        <div class="single-news mb-lg-0 mb-4 wow wow fadeInRight">
+  
+          <!-- Grid row -->
+          <div class="row">
+  
+            <!-- Grid column -->
+            <div class="col-md-3">
+  
+              <!--Image-->
+              <div class="view overlay rounded z-depth-1 mb-4">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg"
+                  alt="Sample image">
+                <a>
+                  <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
+                </a>
+              </div>
+  
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-9">
+  
+              <!-- Excerpt -->
+              <p class="font-weight-bold dark-grey-text">John Doe</p>
+              <div class="news-data d-flex justify-content-between">
+                <a href="#!" class="deep-orange-text">
+                  <h6 class="font-weight-bold">
+                    <mdb-icon fas icon="futbol" class="pr-2"></mdb-icon>Sport</h6>
+                </a>
+                <p class="font-weight-bold dark-grey-text">
+                  <mdb-icon far icon="clock" class="pr-2"></mdb-icon>27/02/2018</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="col-11 text-truncate pl-0 mb-3">
+                  <a href="#!" class="dark-grey-text">Itaque earum rerum hic tenetur a sapiente delectus</a>
+                </div>
+                <a>
+                  <mdb-icon fas icon="angle-double-right"></mdb-icon>
+                </a>
+              </div>
+  
+            </div>
+            <!-- Grid column -->
+  
+          </div>
+          <!-- Grid row -->
+  
+        </div>
+        <!-- Small news -->
+  
+        <!-- Small news -->
+        <div class="single-news mb-4 wow fadeInRight">
+  
+          <!-- Grid row -->
+          <div class="row">
+  
+            <!-- Grid column -->
+            <div class="col-md-3">
+  
+              <!--Image-->
+              <div class="view overlay rounded z-depth-1 mb-4">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Avatars/img (20).jpg" alt="Sample image">
+                <a>
+                  <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
+                </a>
+              </div>
+  
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-9">
+  
+              <!-- Excerpt -->
+              <p class="font-weight-bold dark-grey-text">Sirine jhonson</p>
+              <div class="news-data d-flex justify-content-between">
+                <a href="#!" class="green-text">
+                  <h6 class="font-weight-bold">
+                    <mdb-icon fas icon="heart" class="pr-2"></mdb-icon>Health</h6>
+                </a>
+                <p class="font-weight-bold dark-grey-text">
+                  <mdb-icon far icon="clock" class="pr-2"></mdb-icon>27/02/2018</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="col-11 text-truncate pl-0 mb-3">
+                  <a href="#!" class="dark-grey-text">Soluta nobis est eligendi optio cumque nihil impedit quo
+                    minus</a>
+                </div>
+                <a>
+                  <mdb-icon fas icon="angle-double-right"></mdb-icon>
+                </a>
+              </div>
+  
+            </div>
+            <!-- Grid column -->
+  
+          </div>
+          <!-- Grid row -->
+  
+        </div>
+        <!-- Small news -->
+  
+        <!-- Small news -->
+        <div class="single-news wow fadeInRight">
+  
+          <!-- Grid row -->
+          <div class="row">
+  
+            <!-- Grid column -->
+            <div class="col-md-3">
+  
+              <!--Image-->
+              <div class="view overlay rounded z-depth-1 mb-md-0 mb-4">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Avatars/img (21).jpg" alt="Sample image">
+                <a>
+                  <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
+                </a>
+              </div>
+  
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-9">
+  
+              <!-- Excerpt -->
+              <p class="font-weight-bold dark-grey-text">samira</p>
+              <div class="news-data d-flex justify-content-between">
+                <a href="#!" class="deep-green-text">
+                  <h6 class="font-weight-bold">
+                    <mdb-icon fas icon="dollar-sign" class="pr-2"></mdb-icon>Buisness</h6>
+                </a>
+                <p class="font-weight-bold dark-grey-text">
+                  <mdb-icon far icon="clock" class="pr-2"></mdb-icon>27/02/2018</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="col-11 text-truncate pl-0 mb-lg-3">
+                  <a href="#!" class="dark-grey-text">Duis aute irure dolor in reprehenderit in voluptate</a>
+                </div>
+                <a>
+                  <mdb-icon fas icon="angle-double-right"></mdb-icon>
+                </a>
+              </div>
+  
+            </div>
+            <!-- Grid column -->
+  
+          </div>
+          <!-- Grid row -->
+  
+        </div>
+        <!-- Small news -->
+  
+      </div>
+      <!--Grid column-->
+  
+    </div>
+  
+  

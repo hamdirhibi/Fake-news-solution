@@ -1,0 +1,25 @@
+{
+  "name": "fakenews-back",
+  "version": "1.0.0",
+  "description": "Back end for application Het S7i7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Skander Ben Khelil & Walid Saadallah & Hamdi Rhibi",
+  "license": "MIT ",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.7",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

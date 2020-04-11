@@ -1,0 +1,344 @@
+<!-- Start your project here-->
+<!-- Grid row -->
+<!-- Grid row -->
+<!-- Main navigation -->
+<!--Double navigation-->
+
+
+
+  
+<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+<!-- Default form register -->
+<form class="text-center border border-light p-5" action="#!"  style="background-color: aliceblue;">
+
+  <p class="h4 mb-4">Sign up</p>
+
+  <div class="form-row mb-4">
+      <div class="col">
+          <!-- First name -->
+          <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+      </div>
+      <div class="col">
+          <!-- Last name -->
+          <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+      </div>
+  </div>
+
+  <!-- E-mail -->
+  <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+  <!-- Password -->
+  <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+  <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+      At least 8 characters and 1 digit
+  </small>
+
+  <!-- Phone number -->
+  <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+  <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+      Optional - for two step authentication
+  </small>
+
+  <!-- Newsletter -->
+  <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
+      <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
+  </div>
+
+  <!-- Sign up button -->
+  <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+
+  <!-- Social register -->
+  <p>or sign up with:</p>
+
+  <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+  <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+  <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+  <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+  <hr>
+
+  <!-- Terms of service -->
+  <p>By clicking
+      <em>Sign up</em> you agree to our
+      <a href="" target="_blank">terms of service</a>
+
+</form>
+<!-- Default form register -->
+  </div>
+</div>
+
+ <!-- <div class="text-center">
+
+  </div>
+  -->
+
+
+<div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+      <!-- Default form login -->
+  <form class="text-center border border-light p-5" action="#!" style="background-color: aliceblue;" tabindex="-1">
+
+    <p class="h4 mb-4">Sign in</p>
+
+    <!-- Email -->
+    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+    <!-- Password -->
+    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+
+    <div class="d-flex justify-content-around">
+        <div>
+            <!-- Remember me -->
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+            </div>
+        </div>
+        <div>
+            <!-- Forgot password -->
+            <a href="">Forgot password?</a>
+        </div>
+    </div>
+
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+
+    <!-- Register -->
+    <p>Not a member?
+        <a href="">Register</a>
+    </p>
+
+    <!-- Social login -->
+    <p>or sign in with:</p>
+
+    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+  </form>
+  <!-- Default form login -->
+    <!--/.Content-->
+  </div>
+</div>
+
+
+
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark cyan" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">هات صحيح</a>
+    <!-- <button type="button" mdbBtn color="cyan" rounded="true" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
+    mdbWavesEffect>Login</button>
+
+<!-- 
+  <button type="button" mdbBtn color="primary" class="relative waves-light" (click)="basicModal.show()" mdbWavesEffect>Launch demo modal</button>
+
+    -->
+
+   <!-- <button type="button" mdbBtn color="cyan" rounded="true" data-toggle="modal" data-target="#basicExample"(click)="basicModal.show()"
+   mdbWavesEffect>Sign Up</button> --> 
+
+  </mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a href="/" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="list"></mdb-icon> Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="news/5" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="comments"></mdb-icon> News</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="forum" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="comments"></mdb-icon> Forum</a>
+      </li>
+
+      <!-- <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="cog"></mdb-icon> Settings</a>
+      </li> -->
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+        
+       
+          <img src="./../../assets/notveirfied.png"style="widht:20px;height:20px;" data-toggle="tooltip" title="Not verified account" *ngIf="!user.verified"> 
+         
+         
+          <img src="./../../assets/verif.webp"style="widht:20px;height:20px;" data-toggle="tooltip" title="verified account" *ngIf="user.verified">  Account<span class="caret"></span></a>
+            
+        
+        
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+          <a  href="/login" class="dropdown-item waves-light" mdbWavesEffect >Log In</a>
+          <a  href="/login" class="dropdown-item waves-light" mdbWavesEffect href="#">Log out</a>
+          <a href="/signup"  class="dropdown-item waves-light" mdbWavesEffect >Sign Up</a>
+          <a href="/verifyaccount"  class="dropdown-item waves-light" mdbWavesEffect >Verify Account</a>
+          
+          
+        </div>
+      </li>
+
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+<router-outlet></router-outlet>
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Footer links -->
+    <div class="row text-center text-md-left mt-3 pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">هات صحيح</h6>
+        <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit.
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Catégories</h6>
+        <p>
+          <a href="news/health">Health</a>
+        </p>
+        <p>
+          <a href="news/sport">Sport</a>
+        </p>
+        <p>
+          <a href="news/buiness">Buisness</a>
+        </p>
+        <p>
+          <a href="#news/politic">Politic</a>
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+        <p>
+          <a href="home">Home</a>
+        </p>
+        <p>
+          <a href="forum">Forum</a>
+        </p>
+        <p>
+          <a href="login">Login</a>
+        </p>
+        <p>
+          <a href="signup">Sign Up</a>
+        </p>
+      </div>
+
+      <!-- Grid column -->
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+        <p>
+          <mdb-icon fas icon="home" class="mr-3"></mdb-icon> New York, NY 10012, US
+        </p>
+        <p>
+          <mdb-icon fas icon="envelope" class="mr-3"></mdb-icon> info@example.com
+        </p>
+        <p>
+          <mdb-icon fas icon="phone" class="mr-3"></mdb-icon> + 01 234 567 88
+        </p>
+        <p>
+          <mdb-icon fas icon="print" class="mr-3"></mdb-icon> + 01 234 567 88
+        </p>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Footer links -->
+
+    <hr>
+
+    <!-- Grid row -->
+    <div class="row d-flex align-items-center">
+
+      <!-- Grid column -->
+      <div class="col-md-7 col-lg-8">
+
+        <!--Copyright-->
+        <!-- <p class="text-center text-md-left">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/">
+            <strong> MDBootstrap.com</strong>
+          </a>
+        </p> -->
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-5 col-lg-4 ml-lg-0">
+
+        <!-- Social buttons -->
+        <div class="text-center text-md-right">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a mdbBtn floating="true" size="sm" class="rgba-white-slight mx-1" mdbWavesEffect>
+                <mdb-icon fab icon="facebook"></mdb-icon>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a mdbBtn floating="true" size="sm" class="rgba-white-slight mx-1" mdbWavesEffect>
+                <mdb-icon fab icon="twitter"></mdb-icon>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a mdbBtn floating="true" size="sm" class="rgba-white-slight mx-1" mdbWavesEffect>
+                <mdb-icon fab fab icon="google-plus"></mdb-icon>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a mdbBtn floating="true" size="sm" class="rgba-white-slight mx-1" mdbWavesEffect>
+                <mdb-icon fab icon="linkedin"></mdb-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+</footer>
+<script>
+  // Tooltips Initialization
+$(function () {
+$('[data-toggle="tooltip"]').tooltip()
+})
+</script>
