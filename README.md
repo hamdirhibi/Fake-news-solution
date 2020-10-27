@@ -1,6 +1,8 @@
 # Kubernetes-App
 <p style="text-align: center;">
-  <img src="./assets/images/screenshot.png"/>
+  <img src="./client/src/assets/screenshot.png" wdith="50%"
+  <img src="./client/src/assets/screenshot2.png"wdith="50%" />
+  
 </p>
 
 
@@ -19,3 +21,11 @@
 - Animate.js
 
 
+##  Project Road-Map 
+-> https://drive.google.com/drive/u/0/folders/1DpLq0n33_os8zl8E3KiFtC7KVPY119Bj
+
+## Video Presentation 
+-> https://drive.google.com/drive/u/0/folders/1DpLq0n33_os8zl8E3KiFtC7KVPY119Bj
+
+## Project BMC
+-> https://drive.google.com/drive/u/0/folders/1DpLq0n33_os8zl8E3KiFtC7KVPY119Bj
