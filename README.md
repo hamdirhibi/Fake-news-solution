@@ -1,4 +1,4 @@
-# Kubernetes-App
+# Fake News Platform
 <p style="text-align: center;">
   <img src="./client/src/assets/screenshot.png" wdith="50%"
   <img src="./client/src/assets/screenshot2.png"wdith="50%" />
